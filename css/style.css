@@ -1,0 +1,87 @@
+.body{
+    font-family: 'Roboto','sans-serif';
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    background-color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #DBDBDB;
+}
+a{
+    color: inherit;
+}
+ion-icon {
+    padding: 0px 22px;
+}
+
+.stories{
+    position: static;
+    left: 0;
+    overflow: hidden;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    /* #E5E5E5 */
+    margin-top: 54px;
+    height: 20%;
+    width: 100%;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.storie img{
+    margin: 0px 10px;
+    padding: 5px;
+    background-image: url("../img/stories_background.jpg");
+    background-position: 0px;
+    background-size: 65px;
+    background-repeat: no-repeat;
+}
+.storie{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-overflow: ellipsis;
+}
+.publi{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    border-bottom: 1px solid #DBDBDB;
+}
+a{
+    font-size: 14;
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+
+}
+.user{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+}
+.img_feed{
+    width: 100%;
+    height: auto;
+}
+.actions{
+    width: 100%;
+    height: 76px;
+}
+.space_publi{
+    background-color: #E5E5E5;
+    height: 60px;
+}
+.user img{
+    width: 32px;
+    height: 32px;
+}
