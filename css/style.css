@@ -1,5 +1,8 @@
 .body{
-    font-family: 'Roboto','sans-serif';
+    font-family: 'Roboto';
+    width: 100%;
+}
+.conteudo{
     width: 100%;
 }
 .navbar{
@@ -17,10 +20,22 @@
 a{
     color: inherit;
 }
+.navbar ion-icon{
+    font-size: 18px;    
+}
 ion-icon {
     padding: 0px 22px;
 }
-
+.user ion-icon {
+    position: absolute;
+    right: 10px;
+}
+.user img {
+    margin-left: 10px;
+}
+.user a{
+    margin-left: 10px;
+}
 .stories{
     position: static;
     left: 0;
@@ -36,24 +51,36 @@ ion-icon {
 }
 
 .storie img{
-    margin: 0px 10px;
+    width: 56px;
+    height: 56px;
     padding: 5px;
     background-image: url("../img/stories_background.jpg");
     background-position: 0px;
-    background-size: 65px;
+    background-size: 66px 66px;
     background-repeat: no-repeat;
 }
 .storie{
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+.stories .storie:nth-child(1){
+    margin-left:20px;
+}
+
+.stories .storie:last-child(){
+    margin-right:20px;
+}
+.storie p{
+    width: 78px;
+    overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
 }
 .publi{
     display: flex;
     flex-direction: column;
-    background-color: red;
     border-bottom: 1px solid #DBDBDB;
 }
 a{
@@ -73,10 +100,6 @@ a{
     width: 100%;
     height: auto;
 }
-.actions{
-    width: 100%;
-    height: 76px;
-}
 .space_publi{
     background-color: #E5E5E5;
     height: 60px;
@@ -84,4 +107,49 @@ a{
 .user img{
     width: 32px;
     height: 32px;
+}
+.down-feed{
+    width: 100%;
+    height: 76px;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    font-size: 24px;
+    margin-left: 10px;
+}
+ion-icon[name="bookmark-outline"] {
+    position: absolute;
+    right: 10px;
+}
+strong{
+    font-weight: bold;
+}
+.likes{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    height: 50%;
+}
+.likes img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+.actions ion-icon{
+    padding: 0 2.5px;
+}
+.footer{
+    border: 1px solid #DBDBDB;
+    width: 100%;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 0;
+    height: 54px;
+    font-size: 22px;
 }
