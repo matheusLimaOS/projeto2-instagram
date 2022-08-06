@@ -1,155 +1,373 @@
-.body{
-    font-family: 'Roboto';
+*{
+  box-sizing: border-box;
+}
+.body {
+    font-family: "Roboto";
+    background-color: #e5e5e5;
     width: 100%;
 }
-.conteudo{
-    width: 100%;
+.conteudo {
+  width: 100%;
+  background-color: #e5e5e5;
 }
-.navbar{
+.navbar {
+  display: flex;
+  height: 54px;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: 100;
+}
+.navbarMobile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+.navbar ion-icon {
+  font-size: 18px;
+}
+ion-icon {
+  padding: 0px 22px;
+}
+
+.user ion-icon {
+  position: absolute;
+  right: 10px;
+}
+
+.user img {
+  margin-left: 10px;
+}
+  
+.user a {
+  margin-left: 10px;
+}
+
+.stories {
+  background-color: #ffffff;
+  position: static;
+  left: 0;
+  overflow: hidden;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+    /* #E5E5E5 */
+  margin-top: 54px;
+  height: 20%;
+  width: 100%;
+}
+  
+.storie img {
+  width: 56px;
+  height: 56px;
+  padding: 5px;
+  background-image: url("../img/stories_background.jpg");
+  background-position: 0px;
+  background-size: 55px 55px;
+  background-repeat: no-repeat;
+}
+
+.storie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stories .storie:nth-child(1) {
+  margin-left: 15px;
+}
+
+.stories .storie:last-child() {
+  margin-right: 20px;
+}
+
+.storie p {
+  width: 78px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.publi {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-size: 14;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+}
+
+.user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.img_feed {
+  width: 100%;
+  height: auto;
+}
+
+.space_publi {
+  background-color: #e5e5e5;
+  height: 60px;
+}
+
+.user img {
+  width: 32px;
+  height: 32px;
+}
+
+.down-feed {
+  width: 100%;
+  height: 76px;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+ion-icon[name="bookmark-outline"] {
+  position: absolute;
+  right: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  height: 50%;
+}
+
+.likes img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.actions ion-icon {
+  padding: 0 2.5px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0;
+  height: 54px;
+  font-size: 22px;
+}
+
+.feed {
+  border-radius: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 54px;
+}
+
+.actions-navbar{
+  display: none;
+}
+.navbarDesktop{
+  display: none;
+}
+.navbarDesktop{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.divLogo a{
+  height: fit-content;
+}
+.divLogo{
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-left: 10px;
+}
+.navbar input {
+  text-align: center;
+}
+.navbarDesktop{
+  height: 100%;
+  display: none;
+}
+.actions-navbar{
+  display: flex;
+}
+.actionsNavbar a ion-icon{
+  padding: 0 13px;
+}
+.sideBar{
+  display: none;
+}
+/* Desktop com sidebar */
+
+@media (min-width: 935px){
+  .sugestions{
+    display: flex;
+    justify-content: space-between;
+  }
+  .recomendations{
+    margin-top: 10px;
+  }
+  .recomendations{
+    height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 54px;
-    background-color: #FFFFFF;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    border-bottom: 1px solid #DBDBDB;
-}
-a{
-    color: inherit;
-}
-.navbar ion-icon{
-    font-size: 18px;    
-}
-ion-icon {
-    padding: 0px 22px;
-}
-.user ion-icon {
-    position: absolute;
-    right: 10px;
-}
-.user img {
-    margin-left: 10px;
-}
-.user a{
-    margin-left: 10px;
-}
-.stories{
-    position: static;
-    left: 0;
-    overflow: hidden;
-    padding: 10px 0px;
-    display: flex;
-    align-items: center;
-    /* #E5E5E5 */
-    margin-top: 54px;
-    height: 20%;
-    width: 100%;
-    border-bottom: 1px solid #DBDBDB;
-}
-
-.storie img{
-    width: 56px;
+  }
+  .sideBar .user img{
     height: 56px;
-    padding: 5px;
-    background-image: url("../img/stories_background.jpg");
-    background-position: 0px;
-    background-size: 66px 66px;
-    background-repeat: no-repeat;
-}
-.storie{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-.stories .storie:nth-child(1){
-    margin-left:20px;
-}
-
-.stories .storie:last-child(){
-    margin-right:20px;
-}
-.storie p{
-    width: 78px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-}
-.publi{
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #DBDBDB;
-}
-a{
-    font-size: 14;
+    width: 56px;
+  }
+  .sideBar .user a{
+    font-size: 14px;
     font-weight: 500;
-    text-decoration: none;
-    color: inherit;
-
-}
-.user{
     display: flex;
-    align-items: center;
-    height: 60px;
-    width: 100%;
-}
-.img_feed{
-    width: 100%;
-    height: auto;
-}
-.space_publi{
-    background-color: #E5E5E5;
-    height: 60px;
-}
-.user img{
-    width: 32px;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  .sideBar .user a p:nth-child(2){
+    font-weight: 300;
+  }
+  .sideBar .user{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .sideBar .recomendations .user{
+    margin: 0px;
+  }
+  .sideBar .recomendations .user img{
     height: 32px;
-}
-.down-feed{
-    width: 100%;
-    height: 76px;
-}
-.actions{
+    width: 32px;
+  }
+  .sideBar .user img{
+    margin-left: 0;
+  }
+  .containerSideBar{
     display: flex;
-    align-items: center;
-    height: 50%;
-    font-size: 24px;
-    margin-left: 10px;
-}
-ion-icon[name="bookmark-outline"] {
-    position: absolute;
-    right: 10px;
-}
-strong{
-    font-weight: bold;
-}
-.likes{
+  }
+  .containerFeedSideBar{
+    margin-top: 88px;
     display: flex;
-    align-items: center;
-    padding-left: 15px;
-    height: 50%;
-}
-.likes img{
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-.actions ion-icon{
-    padding: 0 2.5px;
-}
-.footer{
-    border: 1px solid #DBDBDB;
-    width: 100%;
-    background-color: #FFFFFF;
-    position: fixed;
-    left: 0;
+    width: 935px;
+    justify-content: flex-start;
+  }
+  .containerFeedStories{
     display: flex;
+    flex-direction: column;
+  }
+  .navbarMobile{
+    display: none;
+  }
+  .actions-navbar{
+    display: flex;
+  }
+  .navbarDesktop{
+    width: 935px;
+    display: flex;    
+  }
+  .stories{
+    margin-top: 0px;
+    margin-bottom: 24px;
+    width: 614px;
+  }
+  .conteudo{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    bottom: 0;
-    height: 54px;
-    font-size: 22px;
+  }
+  ion-icon[name="logo-instagram"] {
+    padding: 0 10px 0 0;
+    border-right: 1px solid #dbdbdb;
+  }
+  .feed{
+    width: 614px;
+    margin-right: 31px;
+  }
+  .sideBar{
+    display: initial;
+    width: 290px;
+    position: sticky;
+    right: 0;
+    top: -200px;
+  }
+  .sideBar .space_publi{
+    background-color: red;
+  }
+  .navbar{
+    align-items: center;
+    justify-content: center;
+  }
+  .footer{
+    display: none;
+  }
+}
+
+/* Desktop sem sidebar */
+
+@media (min-width: 614px) and (max-width: 935px) {
+
+  .stories {
+    margin-top: 88px;
+    margin-bottom: 24px;
+    width: 612px;
+    border-radius: 3px;
+  }
+  .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stories{
+    border: 1px solid #dbdbdb;
+  }
+  .publi{
+    border: 1px solid #dbdbdb
+  }
+  .feed {
+    width: 612px;
+  }
+  .footer {
+    display: none;
+  }
+  ion-icon[name="logo-instagram"] {
+    padding: 0 10px 0 15px;
+    border-right: 1px solid #dbdbdb;
+  }
+  .navbarMobile{
+    display: none;
+  }
+  .navbarDesktop{
+    display: flex;
+  }
 }
