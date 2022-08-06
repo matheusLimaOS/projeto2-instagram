@@ -231,6 +231,9 @@ strong {
 /* Desktop com sidebar */
 
 @media (min-width: 935px){
+  ion-icon[name="person-outline"]{
+    padding-left: 0;
+  }
   .sugestions{
     display: flex;
     justify-content: space-between;
@@ -319,7 +322,8 @@ strong {
     width: 290px;
     position: sticky;
     right: 0;
-    top: -200px;
+    height: 30%;
+    top: 54px;
   }
   .sideBar .space_publi{
     background-color: red;
